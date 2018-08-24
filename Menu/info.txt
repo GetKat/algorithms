@@ -1,0 +1,7 @@
+Menu de opcoes em c (scrolling menu)
+
+vc navega pelo menu com as setas
+
+basicamente o programa fica limpando a tela e reprintando toda a vez que uma das setas eh pressionada; no caso de um texto maior a ser printado, o programa pareceria laggy
+
+*tentar achar uma melhor solucao
