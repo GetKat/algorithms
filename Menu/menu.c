@@ -23,10 +23,20 @@ int main(){
         while(1){
             if(GetAsyncKeyState(VK_UP)){
                 pos = (pos + 3 - 1) % 3;
+                /*
+                pos--;
+                if(pos < 0)
+                    pos = 3;
+                */
                 break;
             }
             else if(GetAsyncKeyState(VK_DOWN)){
                 pos = (pos + 1) % 3;
+                /*
+                pos++;
+                if(pos > 3)
+                    pos = 0;
+                */
                 break;
             }
             else if(GetAsyncKeyState(VK_RETURN)){
