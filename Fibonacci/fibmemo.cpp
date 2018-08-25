@@ -9,7 +9,7 @@ int main(){
 	int num;
     vi memo;
 
-	scanf("%d", &num);
+    scanf("%d", &num);
     memo.assign(num, -1); // having a -1 value means that the fib number is not yet calculated
 
 	printf("%d\n", fib_memo(--num, memo)); // --num cause the array is 0-indexed
