@@ -1,0 +1,19 @@
+all the algorithm below (exept naive aproach) are in O(n) time complexity
+
+standard fibonacci sequence:
+    1 1 2 3 5 8 13 ...
+    fib(1) = 1
+    fib(2) = 1
+    fib(3) = 2
+    .
+    .
+    .
+
+    base cases:
+        fib(1) = 1
+        fib(2) = 1
+
+        formula fib(n) = fib(n - 1) + fib(n - 2)
+
+momoized fib:
+    /* puts explanation here */
