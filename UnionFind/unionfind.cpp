@@ -1,7 +1,7 @@
 #include <vector>
 
 struct UnionFind{
-	vector<int> dad;
+	std::vector<int> dad;
 
 	UionFind(int n){
 		dad.resize(n);
