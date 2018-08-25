@@ -6,13 +6,13 @@ typedef std::vector<int> vi;
 int fib_memo(int n, vi &memo);
 
 int main(){
-	int num;
+    int num;
     vi memo;
 
     scanf("%d", &num);
     memo.assign(num, -1); // having a -1 value means that the fib number is not yet calculated
 
-	printf("%d\n", fib_memo(--num, memo)); // --num cause the array is 0-indexed
+    printf("%d\n", fib_memo(--num, memo)); // --num cause the array is 0-indexed
 }
 
 int fib_memo(int n, vi &memo){
