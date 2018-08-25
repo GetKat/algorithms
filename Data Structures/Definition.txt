@@ -1,0 +1,78 @@
+Estrutura de dados heterogeneas - Registros
+
+	Registros sao estrutuas compostas por um conjunto de variaveis de tipos diferentes,
+primitivos e/ou estruturados, logicamente relacionados, podem ser referenciasdos
+pelo identificador de registro ou individualmente. E este tipo de estrutura eh utilizado para relacionar dados pertencentes a um mesmo objeto.
+	A referencia ao conteudo de um componenete individual do refistro sera feita pela 
+notacao: 
+
+	id_registro.nome_componente
+
+Declaracao:
+	eh feita atravez da declaração de um nome referente ao registro como um todo, e da declaração do nome de cada campo que constitui
+
+	struct reg{
+		tipo var1;
+			.
+			.
+			.
+		tipo varn;
+	};
+	struct reg registro;
+
+Ex:
+struct regalu{
+	char nome[30];
+	int mat, idade;
+}
+struct rogado alu;
+
+OBS: A atribuicao de valores ao resgistro pode ser feita campo a campo ou de registro para registro (quando os dois registros possuem exatamente os mesmo campos)
+
+Ex:
+
+struct data{
+	int meio[4];
+	int dia, ano;	
+};
+struct data data1, data2;
+
+int main(){
+	data1.dia = 14;	
+}
+
+Ex:
+
+struct tel{
+	int ddd, cel, trab;
+}
+
+struct regagenda{
+	char nome[30], address[30];
+	struct tel fone;
+}
+struct regagenda agenda;
+
+int main(){
+	agenda.fone.ddd = 21;
+	agenda.fone.cel = 999999999;
+	strcpy(agenda.nome, "fulano");
+}
+
+--- Vetor de Registro ---(ez)
+
+struct tel{ 
+	int ddd, cel, trab, casa;
+};
+
+struct regagenda{ 
+	char nome[30], addr[100];
+	struct tel fone;
+};
+
+struct regagenda agenda[30];
+
+int main(){ 
+	agenda[0].fone.ddd = 47;
+	agenda[1].fone.ddd = 21;
+}
