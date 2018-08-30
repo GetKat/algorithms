@@ -1,6 +1,7 @@
 #include <cstdio>
 #include <vector>
 #include <queue>
+// #include <set>
 
 using namespace std;
 
@@ -38,21 +39,29 @@ int main(){
     dijkstra(start);
 }
 
-void dijkstra(int u){
-    priority_queue<ii, vector<ii>, greater<ii> > q;
-    vector<int> dist(n, oo);
+void dijkstra(int u){ //calcula a menor distancia de start ate todos os vertices
+    priority_queue<ii, vector<ii>, greater<ii> > q; //
+    // set<ii> s;
 
-    dist[u] = 0;
+    vector<int> dist(n, oo); // distance to all vertices inicially is infinity
+
+    // s.insert({0, u});
+    dist[u] = 0; //distance to it self is 0
     q.push({0, u});
 
+    // while(!s.empty())
     while(!q.empty()){
         int v = q.top().second; q.pop();
+        // auto it = s.begin();
+        // int v = (*it).second;
+        // s.erase(it);
         for(ii e : graph[v]){
             int u = e.second;
             int w = e.first;
 
             if(dist[v] + w < dist[u]){
                 dist[u] = dist[v] + w;
+                // s.insert({dist[u], u});
                 q.push({dist[u], u});
             }
         }
