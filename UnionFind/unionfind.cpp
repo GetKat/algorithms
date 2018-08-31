@@ -3,7 +3,7 @@
 struct UnionFind{
 	std::vector<int> dad;
 
-	UionFind(int n){
+	UnionFind(int n){
 		dad.resize(n);
 
 		//iota(dad.begin(), dad.end(), 0);
