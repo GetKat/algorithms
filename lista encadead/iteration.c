@@ -8,6 +8,8 @@ struct node{
     struct node *next;
 };
 
+struct node *head;
+
 void show_content(void){
     struct node *aux = head;
 
