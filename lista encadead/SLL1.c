@@ -36,12 +36,13 @@ int main(){
     struct node *aux = head;
     if(aux == (struct node *) NULL)
         printf("Lista vazia!\n");
-    else
+    else{
         while(aux != (struct node *) NULL){
             printf("%d ", aux->data);
             aux = aux->next;
         }
-    printf("\n");
+        printf("\n");
+    }
     
     // Alternative iteration:
     for(struct node *aux = head; aux != (struct node *) NULL; aux = aux->next)
