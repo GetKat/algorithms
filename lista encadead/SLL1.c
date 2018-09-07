@@ -10,7 +10,7 @@ struct node{
 
 int main(){
     int n;
-    struct node *head, *end; // the head and the current end (end is just a iterator)
+    struct node *head, *end; // the 'head' and the current end (end is just a iterator)
     scanf("%d", &n);
 
     head = (struct node *) NULL;
@@ -21,14 +21,14 @@ int main(){
         head->next = (struct node *) NULL;
         end = head;
 
-        // while the given number is differet than 0, add the given number to the end of the list
+        // while the given number is different than 0, add the given number to the end of the list
         while(scanf("%d", &n), n){
-            end->next = (struct node *) malloc(sizeof(struct node)); // alocate space to the next node
+            end->next = (struct node *) malloc(sizeof(struct node)); // allocate space to the next node
             end = end->next; // move the iterator to the next node 
             end->data = n;  
             end->next = (struct node *) NULL;
         }
-        // after creating the list I dont need end anymore
+        // after creating the list I dont need 'end' anymore
         end = (struct node *) NULL;
     }
 
