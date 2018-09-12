@@ -1,5 +1,13 @@
-This folder is designated to the solution of the following problems:
+L.S.E. - Lista Simplesmente Encadeada
+L.D.E. - Lista Duplamente Encadeada
+L.S.E.D - Lista Simplesmente Encadeada com Descitor
+L.D.E.D - Lista Duplamente Encadeada com Descritor
+L.S.E.C - Lista Simplesmente Encadeada Circular
+L.D.E.C - Lista Duplamente Encadeada Circular
+L.S.E.C.D - Lista Simplesmente Encadeada Circular com Descritor
+L.D.E.C.D - Lista Duplamente Encadeada Circular com Descritor
 
+This folder is designated to the solution of the following problems:
 
 1) Geração de uma L.S.E. onde os elementos serão inseridos na ordem inversa em que forem obtidos 
 2) Geração de uma L.S.E. onde os elementos serão inseridos na ordem inversa em que forem obtidos em recursão
