@@ -1,35 +1,60 @@
 #ifndef NODE_H_
 #define NODE_H_
+#include <stdio.h>
 
-struct single_node;
-struct double_node;
-struct single_descriptor;
-struct double_descriptor;
+struct node;
 
-struct single_node{
+struct node{
     int data;
-    struct single_node *next;
+    struct node *next;
 };
 
-struct double_node{
-    int data;
-    struct double_node *next, *prev;
-};
+void cria_list_ord(struct node **h); //19
+void cria_lista_inv(struct node **h); //1
+void show_content(struct node *h); //3
 
-struct single_descriptor{
-    int count;
-    struct single_node *head, *tail;
-};
+void show_content(struct node *h){
+    struct node *aux = h;
+    printf("Lista:\n");
+    while(aux != (struct node *) NULL){
+        printf("%d -> ", aux->data);
+        aux = aux->next;
+    } 
+    aux = (struct node *) NULL;
+    printf("NULL\n");
+}
 
-struct double_descriptor{
-    int count;
-    struct double_node *head, *tail;
-};
+void cria_lista_inv(struct node **h){
+    struct node *aux;
+    int n;
+    aux = *h = (struct node *) NULL;
+    while(scanf("%d", &n), n){
+        aux = (struct node *) malloc(sizeof(struct node));
+        aux->data = n;
+        aux->next = *h;
+        *h = aux;
+        aux = (struct node *) NULL;
+    }
+}
 
-typedef struct single_node snode;
-typedef struct double_node dnode;
-typedef struct single_descriptor sdesc;
-typedef struct double_descriptor ddesc;
+void cria_list_ord(struct node **h){
+    int n;
+    struct node *aux;
 
+    scanf("%d", &n);
+    if(n){
+        aux = (struct node *) malloc(sizeof(struct node));
+        aux->data = n;
+        aux->next = (struct node *) NULL;
+        *h = aux;
+        while(scanf("%d", &n) && n){
+            aux->next = (struct node *) malloc(sizeof(struct node));
+            aux = aux->next;
+            aux->data = n;
+            aux->next = (struct node *) NULL;
+        }
+    }
+    aux = (struct node *) NULL;
+}
 
 #endif // NODE_H_
